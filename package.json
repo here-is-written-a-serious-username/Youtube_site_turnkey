@@ -5,11 +5,11 @@
   "homepage": "",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /Youtube_site_turnkey/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/here-is-written-a-serious-username/Youtube_site_turnkey.git"
   },
   "keywords": [],
   "author": "",
