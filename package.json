@@ -2,18 +2,18 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "",
+  "homepage": "https://here-is-written-a-serious-username.github.io/Youtube_site_turnkey/",
   "scripts": {
-    "start": "parcel src/*.html",
+    "start": "parcel src/*.html -p 8888",
     "build": "parcel build src/*.html --public-url /Youtube_site_turnkey/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/here-is-written-a-serious-username/Youtube_site_turnkey.git"
+    "url": " "
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": " ",
   "bugs": {
     "url": ""
   },

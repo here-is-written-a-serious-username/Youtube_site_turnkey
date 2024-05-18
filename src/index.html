@@ -4,14 +4,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./sass/main.scss" />
+
   <title>Page title</title>
-  <link rel="stylesheet" href="./sass/index.scss" />
-  <script type="module" src="./index.js"></script>
 </head>
 
 <body>
-  <h1>Example title</h1>
 
+  <div class="main-page">
+
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a data-nav_go_to="#about-me" class="nav__link js-nav" href="#">О нас</a></li>
+            <li class="nav__item"><a data-nav_go_to="#" class="nav__link js-nav" href="#">Услуги</a></li>
+            <li class="nav__item"><a data-nav_go_to="#price" class="nav__link js-nav" href="#">Цены</a></li>
+            <li class="nav__item"><a data-nav_go_to="#" class="nav__link js-nav" href="#">Кейсы</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-cont">
+        <h1>YOUTUBE ПОД КЛЮЧ
+          Создаем, запускаем, упаковываем и продвигаем YouTube-каналы
+        </h1>
+
+        <button>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+
+        <p>С НАМИ РАБОТАЮТ УЖЕ БОЛЕЕ 30 КАНАЛОВ ДЛЯ БИЗНЕСА, ЭКСПЕРТОВ И БЛОГЕРОВ.</p>
+
+      </div>
+    </section>
+  </div>
+
+  <main>
+
+    <section class="section">
+      <div>
+        <h2></h2>
+      </div>
+    </section>
+
+    <section class="section">
+      <div>
+        <h2></h2>
+      </div>
+    </section>
+
+    <section class="section">
+      <div>
+        <h2></h2>
+      </div>
+    </section>
+
+  </main>
+
+  <footer></footer>
+
+  <script type="module" src="./index.js"></script>
 </body>
 
 </html>

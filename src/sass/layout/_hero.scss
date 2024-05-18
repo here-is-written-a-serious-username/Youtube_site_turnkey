@@ -1,0 +1,34 @@
+.hero {
+    height: 100%;
+    // background-color: $accent-color;
+    // padding-bottom: 256px;
+    // margin: 0 auto;
+
+    background-image: url(../images/hero/hero-r.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    // @media screen and (max-width: 767px) {
+    //     padding-top: 160px;
+    //     background-position: bottom right, top right;
+    // }
+
+    // @media screen and (min-width: 768px) {
+    //     padding-top: 235px;
+    //     background-position: bottom, top right;
+    // }
+
+    // @media screen and (min-width: 1440px) {
+    //     padding-top: 235px;
+    //     background-position: bottom, top;
+    // }
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-cont {
+    width: 30%;
+    margin-left: auto;
+}
