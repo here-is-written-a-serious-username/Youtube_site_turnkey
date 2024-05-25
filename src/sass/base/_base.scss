@@ -14,6 +14,7 @@ body {
     font-family: $main-font;
     color: $main-color;
     background-color: $background-color;
+    user-select: none;
 }
 
 .main-page {
@@ -48,6 +49,12 @@ img {
 
 a {
     text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button {
+    font-family: inherit;
     color: inherit;
     cursor: pointer;
 }
