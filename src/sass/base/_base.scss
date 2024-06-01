@@ -13,13 +13,28 @@ body {
     margin: 0;
     font-family: $main-font;
     color: $main-color;
-    background-color: $background-color;
+    background-color: $main-background-color;
     user-select: none;
 }
 
 .main-page {
     height: 100vh;
-    // min-height: 700px;
+
+    @media screen and (max-width: 767px) {
+        min-height: 700px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        min-height: 800px;
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1439px) {
+        min-height: 880px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        min-height: 960px;
+    }
 }
 
 // body.modal-open {
@@ -60,15 +75,26 @@ button {
 }
 
 .section {
+    position: relative;
 
     @media screen and (max-width: 1199px) {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     @media screen and (min-width: 1200px) {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1.2px;
+        width: 100%;
+        background-color: $secondary-background-color;
     }
 }
 

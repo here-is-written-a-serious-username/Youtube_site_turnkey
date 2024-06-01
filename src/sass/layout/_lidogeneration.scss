@@ -1,0 +1,110 @@
+// .lidogeneration{
+
+// }
+
+.lidogeneration__title-wrap {
+
+    @media screen and (min-width: 480px) {
+        width: 75%;
+        margin-left: auto;
+    }
+}
+
+.lidogeneration__title {
+    text-align: right;
+}
+
+.lidogeneration__list {
+    margin-top: 48px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}
+
+.lidogeneration__item {
+    position: relative;
+    transition: transform 250ms ease-in-out;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 30%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 24%;
+    }
+
+    .lidogeneration__item-cont {
+        position: relative;
+        z-index: 1;
+        border: 1px solid $main-color;
+        border-radius: 22px;
+        background-color: $secondary-background-color;
+        font-size: 18px;
+
+        @media screen and (max-width: 1199px) {
+            padding: 26px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 36px;
+        }
+    }
+
+    &:hover {
+
+        @media screen and (max-width: 767px) {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        @media screen and (min-width: 768px) {
+            transform: translateY(-12px) scale(1.02);
+        }
+
+        &::after {
+            content: "";
+            background: $secondary-background-color;
+            filter: blur(15px) brightness(1);
+            position: absolute;
+            border-radius: 22px;
+            width: 108%;
+            height: 108%;
+            left: -2%;
+            top: -2%;
+            z-index: 0;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &+& {
+            margin-top: 24px;
+        }
+
+        &:nth-child(2) {
+            margin-left: 14%;
+        }
+
+        &:nth-child(3) {
+            margin-left: 28%;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &:nth-child(2) {
+            margin-top: 30px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 60px;
+        }
+    }
+
+}
