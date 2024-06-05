@@ -1,0 +1,32 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+
+<symbol id="icon+" viewBox="0 0 32 32">
+<path d="M14.398 32.002l0.011-14.402-14.402 0.011v-3.213l14.402 0.011-0.011-14.402h3.213l-0.011 14.402h14.391v3.19h-14.391v14.391l-3.202 0.011z"></path>
+</symbol>
+
+<symbol id="icon-x" viewBox="0 0 32 32">
+<path d="M28.28 31.12l-12.72-12.74-12.72 12.74-2.84-2.84 12.74-12.72-12.74-12.72 2.84-2.84 12.72 12.74 12.72-12.72 2.82 2.82-12.72 12.72 12.72 12.72-2.82 2.84z"></path>
+</symbol>
+
+<symbol id="icon-checkmark" viewBox="0 0 32 32">
+<path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+</symbol>
+
+
+
+
+<symbol id="icon-minus" viewBox="0 0 32 32">
+<path d="M0 13v6c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1h-30c-0.552 0-1 0.448-1 1z"></path>
+</symbol>
+
+<symbol id="icon-plus" viewBox="0 0 32 32">
+<path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+</symbol>
+
+<!-- footer -->
+
+
+</defs>
+</svg>
+
