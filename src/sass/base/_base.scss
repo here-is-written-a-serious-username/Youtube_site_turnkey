@@ -21,7 +21,8 @@ body {
     height: 100vh;
 
     @media screen and (max-width: 767px) {
-        min-height: 700px;
+        // min-height: 700px;
+        min-height: 760px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -29,11 +30,12 @@ body {
     }
 
     @media screen and (min-width: 1200px) and (max-width: 1439px) {
-        min-height: 880px;
+        // min-height: 880px;
+        min-height: 960px;
     }
 
     @media screen and (min-width: 1440px) {
-        min-height: 960px;
+        min-height: 990px;
     }
 }
 

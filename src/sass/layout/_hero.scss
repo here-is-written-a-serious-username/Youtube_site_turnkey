@@ -7,7 +7,7 @@
     background-size: auto 100%;
 
     @media screen and (max-width: 767px) {
-        min-height: 700px;
+        min-height: 760px;
         padding-top: 128px;
         background-position: center top;
         background-image: url(../images/hero/hero3.jpg);
@@ -21,14 +21,14 @@
     }
 
     @media screen and (min-width: 1200px) and (max-width: 1439px) {
-        min-height: 880px;
+        min-height: 960px;
         background-position: left top;
         padding-top: 140px;
         background-image: url(../images/hero/hero1.jpg);
     }
 
     @media screen and (min-width: 1440px) {
-        min-height: 960px;
+        min-height: 990px;
         background-position: left top;
         padding-top: 180px;
         background-image: url(../images/hero/hero1.jpg);

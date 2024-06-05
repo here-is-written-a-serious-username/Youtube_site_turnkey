@@ -1,0 +1,125 @@
+dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $main-background-color;
+    animation: fade-out 0.7s ease-out;
+    user-select: none;
+
+    @media screen and (max-width: 479px) {
+        width: 70%;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        width: 50%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 32%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 24%;
+    }
+}
+
+dialog[open] {
+    animation: fade-in 0.7s ease-out;
+}
+
+dialog[open]::backdrop {
+    background: rgba(0, 0, 0, 0.5) !important;
+    animation: backdrop-fade-in 0.7s ease-out forwards;
+}
+
+.modal__cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__title {
+    font-size: 30px;
+    margin-bottom: 36px;
+    color: rgb(105, 213, 31);
+}
+
+.modal__img {
+    width: 80px;
+    margin-bottom: 28px;
+}
+
+.modal__close-btn {
+    border: none;
+    border-radius: 28px;
+    background-color: rgb(105, 213, 31);
+    font-weight: 500;
+    letter-spacing: 0.2;
+    transition: transform 250ms ease-in-out, background-color 250ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.025);
+        background-color: rgb(102, 255, 0);
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 16px 32px;
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 20px 40px;
+        font-size: 17px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scaleY(0), translate(-50%, -50%);
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1), translate(-50%, -50%);
+        display: block;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: scaleY(1), translate(-50%, -50%);
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleY(0), translate(-50%, -50%);
+        display: none;
+    }
+}
+
+@keyframes backdrop-fade-in {
+    0% {
+        background-color: rgb(0 0 0 / 0%);
+    }
+
+    100% {
+        background-color: rgb(0 0 0 / 25%);
+    }
+}
+
+body,
+button {
+    font-family: system-ui;
+}
