@@ -1,7 +1,8 @@
 export { resetMobileMenuAndAriaState };
 
+let startY = 0; // для закриття скролом верх
+
 const btnMobilMenu = document.querySelector('.js-toggle-mobil-menu');
-const IconBtnMobilMenu = document.querySelector('#hamburger');
 const MobilMenu = document.querySelector('#mobil-menu');
 
 
@@ -19,19 +20,8 @@ function toggleMenu() {
     btnMobilMenu.setAttribute('aria-expanded', !isMenuOpen);
 
     document.body.classList.toggle("modal-open");
-
-    if (!IconBtnMobilMenu.classList.contains('is-open') && !IconBtnMobilMenu.classList.contains('is-closed')) {
-        IconBtnMobilMenu.classList.add('is-open');
-        MobilMenu.classList.add('is-open');
-        return;
-    }
-
-    if (IconBtnMobilMenu.classList.contains('is-open') || IconBtnMobilMenu.classList.contains('is-closed')) {
-        MobilMenu.classList.toggle('is-open');
-        IconBtnMobilMenu.classList.toggle('is-open');
-        IconBtnMobilMenu.classList.toggle('is-closed');
-    }
-
+    MobilMenu.classList.toggle('is-open');
+    btnMobilMenu.classList.toggle('btn-active');
 }
 
 function toggleMenuKeyDown(event) {
@@ -43,7 +33,22 @@ function toggleMenuKeyDown(event) {
 function resetMobileMenuAndAriaState() {
     MobilMenu.classList.remove('is-open');
     document.body.classList.remove("modal-open");
-    IconBtnMobilMenu.classList.remove('is-open');
-    IconBtnMobilMenu.classList.remove('is-closed');
+    btnMobilMenu.classList.remove('btn-active');
     btnMobilMenu.setAttribute('aria-expanded', false);
 }
+
+
+
+
+// Відстежуємо початкову точку торкання
+window.addEventListener('touchstart', function (event) {
+    startY = event.touches[0].clientY;
+});
+
+// Відстежуємо рух пальця
+window.addEventListener('touchmove', function (event) {
+    let moveY = event.touches[0].clientY;
+    if (startY - moveY > 120) { // пікселів - поріг для визначення скролу вверх
+        setTimeout(resetMobileMenuAndAriaState, 100);
+    }
+});

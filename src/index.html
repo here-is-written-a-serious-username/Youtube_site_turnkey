@@ -5,13 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./sass/main.scss" />
 
-  <title>YOUTUBE ПОД КЛЮЧ</title>
+  <title>YouTube под ключ</title>
 </head>
 
 <body>
@@ -21,12 +26,19 @@
     <header class="header">
       <div class="container">
         <nav class="header__nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a data-nav_go_to="#about-me" class="nav__link js-nav" href="#">О нас</a></li>
-            <li class="nav__item"><a data-nav_go_to="#" class="nav__link js-nav" href="#">Услуги</a></li>
+          <a class="header__logo" href="./index.html">
+            <img class="header__logo-img" src="./images/logo.png" alt="logo" width="40x">
+            YouTube под ключ
+          </a>
+          <ul class="nav__list" id="mobil-menu">
+            <li class="nav__item"><a data-nav_go_to="#about" class="nav__link js-nav" href="#">О нас</a></li>
+            <li class="nav__item"><a data-nav_go_to="#services" class="nav__link js-nav" href="#">Услуги</a></li>
             <li class="nav__item"><a data-nav_go_to="#price" class="nav__link js-nav" href="#">Цены</a></li>
-            <li class="nav__item"><a data-nav_go_to="#" class="nav__link js-nav" href="#">Кейсы</a></li>
+            <li class="nav__item"><a data-nav_go_to="#cases" class="nav__link js-nav" href="#">Кейсы</a></li>
           </ul>
+
+          <button aria-expanded="false" aria-controls="mobil-menu" aria-label="open or close the mobile menu"
+            class="btn-mobil-menu js-toggle-mobil-menu"><span class="btn-burger"></span></button>
         </nav>
       </div>
     </header>
@@ -316,7 +328,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section price" id="price">
       <div class="container">
         <h2 class="visually-hidden">Цены, Создание YouTube канала под ключ, Калькулятор YouTube, заказать, получить консультацию </h2>
 
@@ -444,7 +456,7 @@
                             <use href="./images/sprite.svg#icon-minus"></use>
                           </svg>
                         </button>
-                        <input class="calculator__counter-inpnt" name="" type="number" value="0" step="1" min="0">
+                        <input class="calculator__counter-inpnt" name="" type="number" value="0" step="1" min="0" max="" readonly>
                         <button class="calculator__btn-counter btn-counter-plus" type="button">
                           <svg class="calculator__icon-plus" width="16" height="16">
                             <use href="./images/sprite.svg#icon-plus"></use>
@@ -458,7 +470,7 @@
                             <use href="./images/sprite.svg#icon-minus"></use>
                           </svg>
                         </button>
-                        <input class="calculator__counter-inpnt" name="" type="number" value="0" step="1" min="0">
+                        <input class="calculator__counter-inpnt" name="" type="number" value="0" step="1" min="0" max="" readonly>
                         <button class="calculator__btn-counter btn-counter-plus" type="button">
                           <svg class="calculator__icon-plus" width="16" height="16">
                             <use href="./images/sprite.svg#icon-plus"></use>
@@ -468,10 +480,8 @@
                     </div>
 
                     <label class="calculator__counter-field calculator__total">
-
-                      <input class="calculator__counter-inpnt" name="" type="number" value="0" step="1" min="0">
-                      <span class="calculator__counter-label">Руб</span>
-
+                      <input class="calculator__counter-inpnt" name="" type="number" value="0" step="1" min="0" max="" readonly>
+                      <span class="calculator__counter-label"> ₽ </span>
                     </label>
 
                   </div>
@@ -490,7 +500,47 @@
 
   </main>
 
-  <footer></footer>
+  <footer class="section footer">
+    <div class="container">
+
+      <div class="footer__cont">
+        <div class="contact-links__wrap">
+          <h2 class="title footer__title">Хотите начать сотрудничество?</h2>
+          <a class="contact-links__tel" href="tel:+79267116130">
+            <svg class="contact-links__tel-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+            +7 (926) 711 61 30
+          </a>
+          <ul class="contact-links__list">
+            <li class="contact-links__item">
+              <a class="contact-links__link" href="https://t.me/mikerinatv" target="_blank" rel="noreferrer noopener">
+                <svg class="contact-links__icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-telegram"></use>
+                </svg>
+                Telegram
+              </a>
+            </li>
+            <li class="contact-links__item">
+              <a class="contact-links__link" href="https://wtsp.cc/79267116130" target="_blank" rel="noreferrer noopener">
+                <svg class="contact-links__icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-whatsapp"></use>
+                </svg>
+                WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__photo-wrap">
+          <div class="footer__photo-cont"><img class="footer__photo" src="./images/1.png" alt="фото Марченко Марина"></div>
+          <h3 class="footer__photo-title">Марина Марченко</h3>
+        </div>
+      </div>
+
+      <p class="copyright">© 2024 YouTube turnkey ― Maryna Marchenko</p>
+    </div>
+  </footer>
 
   <script type="module" src="./index.js"></script>
 </body>
