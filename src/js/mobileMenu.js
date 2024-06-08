@@ -10,8 +10,12 @@ btnMobilMenu.addEventListener('click', toggleMenu);
 btnMobilMenu.addEventListener('keydown', toggleMenuKeyDown);
 
 window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
+    if (!e.matches) {
+        addTouchListeners();
+        return;
+    }
     resetMobileMenuAndAriaState()
+    removeTouchListeners();
 });
 
 function toggleMenu() {
@@ -38,17 +42,28 @@ function resetMobileMenuAndAriaState() {
 }
 
 
+// функції додають і видаляють слухачів скролу вверх по екрану для закриття мобільного меню
+function addTouchListeners() {
+    window.addEventListener('touchstart', touchStartHandler);
+    window.addEventListener('touchmove', touchMoveHandler);
+}
 
+function removeTouchListeners() {
+    if (touchStartHandler && touchMoveHandler) {
+        window.removeEventListener('touchstart', touchStartHandler);
+        window.removeEventListener('touchmove', touchMoveHandler);
+    }
+}
 
 // Відстежуємо початкову точку торкання
-window.addEventListener('touchstart', function (event) {
+function touchStartHandler(event) {
     startY = event.touches[0].clientY;
-});
+};
 
 // Відстежуємо рух пальця
-window.addEventListener('touchmove', function (event) {
+function touchMoveHandler(event) {
     let moveY = event.touches[0].clientY;
     if (startY - moveY > 120) { // пікселів - поріг для визначення скролу вверх
         setTimeout(resetMobileMenuAndAriaState, 100);
     }
-});
+};

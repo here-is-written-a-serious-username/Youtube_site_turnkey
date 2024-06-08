@@ -13,9 +13,21 @@ const modalBtns = document.querySelectorAll(".js-modal");
 function onModalBtnClick(e) {
     e.preventDefault();
     modal.showModal();
+    document.body.classList.toggle("modal-open");
+    document.addEventListener('click', handlerBackdropClick);
+}
+
+function handlerBackdropClick(event) {
+    if (!event.target.classList.contains('modal__cont') && event.target.classList.contains('aaa')) {
+        modal.close();
+        document.removeEventListener('click', handlerBackdropClick);
+        document.body.classList.toggle("modal-open");
+    }
 }
 
 function onCloseBtnClick(e) {
     e.preventDefault();
     modal.close();
+    document.body.classList.toggle("modal-open");
+    document.removeEventListener('click', handlerBackdropClick);
 }
