@@ -1,9 +1,144 @@
-dialog {
+// dialog {
+//     position: fixed;
+//     // top: 0;
+//     // left: 0;
+//     background-color: $main-background-color;
+//     animation: fade-out 0.7s ease-out;
+
+//     @media screen and (max-width: 479px) {
+//         width: 70%;
+//     }
+
+//     @media screen and (min-width: 480px) and (max-width: 767px) {
+//         width: 50%;
+//     }
+
+//     @media screen and (min-width: 768px) and (max-width: 1199px) {
+//         width: 32%;
+//     }
+
+//     @media screen and (min-width: 1200px) {
+//         width: 24%;
+//     }
+// }
+
+// dialog[open] {
+//     animation: fade-in 0.7s ease-out;
+// }
+
+// dialog[open]::backdrop {
+//     animation: backdrop-fade-in 0.7s ease-out forwards;
+// }
+
+// .modal__cont {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+// .modal__title {
+//     font-size: 30px;
+//     margin-bottom: 36px;
+//     color: rgb(105, 213, 31);
+// }
+
+// .modal__img {
+//     width: 80px;
+//     margin-bottom: 28px;
+// }
+
+// .modal__close-btn {
+//     border: none;
+//     border-radius: 28px;
+//     background-color: rgb(105, 213, 31);
+//     font-weight: 500;
+//     letter-spacing: 0.2;
+//     transition: transform 250ms ease-in-out, background-color 250ms ease-in-out;
+
+//     &:hover {
+//         transform: scale(1.025);
+//         background-color: rgb(102, 255, 0);
+//     }
+
+//     @media screen and (max-width: 767px) {
+//         padding: 16px 32px;
+//         font-size: 16px;
+//     }
+
+//     @media screen and (min-width: 768px) and (max-width: 1199px) {
+//         padding: 20px 40px;
+//         font-size: 17px;
+//     }
+
+//     @media screen and (min-width: 1200px) {
+//         padding: 20px 40px;
+//         font-size: 18px;
+//     }
+// }
+
+/* Animation keyframes */
+
+// @keyframes fade-in {
+//     0% {
+//         opacity: 0;
+//         transform: scaleY(0), translate(-50%, -50%);
+//         display: none;
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: scaleY(1), translate(-50%, -50%);
+//         display: block;
+//     }
+// }
+
+// @keyframes fade-out {
+//     0% {
+//         opacity: 1;
+//         transform: scaleY(1), translate(-50%, -50%);
+//         display: block;
+//     }
+
+//     100% {
+//         opacity: 0;
+//         transform: scaleY(0), translate(-50%, -50%);
+//         display: none;
+//     }
+// }
+
+// @keyframes backdrop-fade-in {
+//     0% {
+//         background-color: $main-background-color;
+//         opacity: 0;
+//     }
+
+//     100% {
+//         background-color: $main-background-color;
+//         opacity: 0.5;
+//     }
+// }
+
+// .modal {
+//    }
+
+.modal__overlay {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__container {
     background-color: $main-background-color;
-    animation: fade-out 0.7s ease-out;
+    padding: 30px;
+    border: 2px solid $secondary-background-color;
+    border-radius: 6px;
+    overflow-y: auto;
 
     @media screen and (max-width: 479px) {
         width: 70%;
@@ -22,40 +157,63 @@ dialog {
     }
 }
 
-dialog[open] {
-    animation: fade-in 0.7s ease-out;
-}
-
-dialog[open]::backdrop {
-    animation: backdrop-fade-in 0.7s ease-out forwards;
-}
-
-.modal__cont {
+.modal__header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 36px;
 }
 
 .modal__title {
     font-size: 30px;
-    margin-bottom: 36px;
+    font-weight: 600;
+    line-height: 1.25;
     color: rgb(105, 213, 31);
+}
+
+.modal__close {
+    background: transparent;
+    border: 0;
+    transition: transform 250ms ease-in-out, color 250ms ease-in-out;
+    will-change: transform, color;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.025);
+        color: rgb(102, 255, 0);
+    }
+}
+
+.modal__close:before {
+    content: "\2715";
+    font-size: 18px;
+}
+
+.modal__content {
+    margin-bottom: 28px;
+
 }
 
 .modal__img {
     width: 80px;
-    margin-bottom: 28px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.modal__close-btn {
+.modal__btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     border-radius: 28px;
     background-color: rgb(105, 213, 31);
     font-weight: 500;
     letter-spacing: 0.2;
     transition: transform 250ms ease-in-out, background-color 250ms ease-in-out;
+    will-change: transform, background-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: scale(1.025);
         background-color: rgb(102, 255, 0);
     }
@@ -76,44 +234,74 @@ dialog[open]::backdrop {
     }
 }
 
-/* Animation keyframes */
-
-@keyframes fade-in {
-    0% {
+/**************************\
+       Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from {
         opacity: 0;
-        transform: scaleY(0), translate(-50%, -50%);
-        display: none;
     }
 
-    100% {
+    to {
         opacity: 1;
-        transform: scaleY(1), translate(-50%, -50%);
-        display: block;
     }
 }
 
-@keyframes fade-out {
-    0% {
+@keyframes mmfadeOut {
+    from {
         opacity: 1;
-        transform: scaleY(1), translate(-50%, -50%);
-        display: block;
     }
 
-    100% {
+    to {
         opacity: 0;
-        transform: scaleY(0), translate(-50%, -50%);
-        display: none;
     }
 }
 
-@keyframes backdrop-fade-in {
-    0% {
-        background-color: $main-background-color;
-        opacity: 0;
+@keyframes mmslideIn {
+    from {
+        transform: translateY(15%);
     }
 
-    100% {
-        background-color: $main-background-color;
-        opacity: 0.5;
+    to {
+        transform: translateY(0);
     }
+}
+
+@keyframes mmslideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10%);
+    }
+}
+
+.micromodal-slide {
+    display: none;
+}
+
+.micromodal-slide.is-open {
+    display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
 }
