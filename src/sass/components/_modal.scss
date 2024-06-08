@@ -133,13 +133,7 @@
     align-items: center;
 }
 
-.modal__container {
-    background-color: $main-background-color;
-    padding: 30px;
-    border: 2px solid $secondary-background-color;
-    border-radius: 6px;
-    overflow-y: auto;
-
+.modal__wrap {
     @media screen and (max-width: 479px) {
         width: 70%;
     }
@@ -155,6 +149,30 @@
     @media screen and (min-width: 1200px) {
         width: 24%;
     }
+}
+
+.modal__container {
+    background-color: $main-background-color;
+    padding: 30px;
+    border: 2px solid $secondary-background-color;
+    border-radius: 6px;
+    overflow-y: auto;
+
+    // @media screen and (max-width: 479px) {
+    //     width: 70%;
+    // }
+
+    // @media screen and (min-width: 480px) and (max-width: 767px) {
+    //     width: 50%;
+    // }
+
+    // @media screen and (min-width: 768px) and (max-width: 1199px) {
+    //     width: 32%;
+    // }
+
+    // @media screen and (min-width: 1200px) {
+    //     width: 24%;
+    // }
 }
 
 .modal__header {

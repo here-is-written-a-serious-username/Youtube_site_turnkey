@@ -37,6 +37,7 @@ import MicroModal from 'micromodal';
 MicroModal.init({
     // onShow: modal => console.info(`${modal.id} is shown`), // [1]
     // onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+    disableFocus: true,
     disableScroll: true, // [6]
     awaitOpenAnimation: true,  // [8]
     awaitCloseAnimation: true,  // [9]
