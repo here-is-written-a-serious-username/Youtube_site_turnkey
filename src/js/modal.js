@@ -1,7 +1,7 @@
 
 // const modal = document.getElementById("modal");
 // const closeBtn = document.querySelector(".modal__close-btn");
-// const modalBtns = document.querySelectorAll(".js-modal");
+const modalBtns = document.querySelectorAll(".js-modal");
 
 // (() => {
 //     if (modalBtns.length > 0) {
