@@ -1,0 +1,63 @@
+.ticker-tape {
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        animation: marquee 18s linear infinite;
+
+        &:nth-child(1) {
+            position: absolute;
+            left: -100%;
+            animation: marquee 18s 3s linear infinite;
+        }
+
+        &:nth-child(2) {
+            position: absolute;
+            left: -100%;
+            animation: marquee 18s 6s linear infinite;
+        }
+
+        &:nth-child(3) {
+            position: absolute;
+            left: -100%;
+            animation: marquee 18s 9s linear infinite;
+        }
+
+        &:nth-child(4) {
+            position: absolute;
+            left: -100%;
+            animation: marquee 18s 12s linear infinite;
+        }
+
+        &:nth-child(5) {
+            position: absolute;
+            left: -100%;
+            animation: marquee 18s 15s linear infinite;
+        }
+    }
+
+    .ticker-tape__line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        left: 0;
+        transform: translateX(100%);
+    }
+}

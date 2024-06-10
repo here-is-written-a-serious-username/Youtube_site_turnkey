@@ -85,7 +85,17 @@ button {
 
     @media screen and (min-width: 1200px) {
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 136px;
+    }
+
+    &::before {
+        position: absolute;
+        bottom: 36px;
+        content: "";
+        display: block;
+        height: 1.2px;
+        width: 100%;
+        background-color: $secondary-background-color;
     }
 
     &:after {
