@@ -21,7 +21,7 @@
             width: 30px;
             height: 100%;
             background-color: #fff;
-            animation: shiny-btn 3s ease-in-out;
+            animation: shiny-btn 1s ease-in-out;
         }
     }
 
@@ -52,12 +52,12 @@
         opacity: 0;
     }
 
-    80% {
+    50% {
         transform: scale(0) rotate(45deg);
         opacity: 0.5;
     }
 
-    81% {
+    51% {
         transform: scale(4) rotate(45deg);
         opacity: 1;
     }

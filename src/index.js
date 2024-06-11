@@ -2,4 +2,4 @@ import "./js/accordion";
 import "./js/mobileMenu";
 import "./js/pageNav";
 import "./js/modal";
-import "./js/animate";
+import "./js/animation";
