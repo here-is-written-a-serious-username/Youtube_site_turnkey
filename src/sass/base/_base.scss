@@ -80,7 +80,7 @@ button {
 
     @media screen and (max-width: 1199px) {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 86px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -144,4 +144,11 @@ input {
     display: block;
     height: 100%;
     width: 100%;
+}
+
+// для анімації
+.lidogeneration,
+.about,
+.services {
+    overflow: hidden;
 }

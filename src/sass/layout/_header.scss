@@ -148,15 +148,15 @@
     &:hover,
     &:focus {
         .btn-burger {
-            background-color: $secondary-background-color;
+            background-color: $secondary-color;
         }
 
         &::before {
-            background-color: $secondary-background-color;
+            background-color: $secondary-color;
         }
 
         &::after {
-            background-color: $secondary-background-color;
+            background-color: $secondary-color;
         }
     }
 }
