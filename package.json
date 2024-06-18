@@ -20,14 +20,17 @@
   "dependencies": {
     "accordion-js": "^3.3.4",
     "animate.css": "^4.1.1",
+    "axios": "^1.7.2",
     "micromodal": "^0.4.10",
     "modal-vanilla": "^0.13.0",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.7"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.6.0",
     "@parcel/transformer-sass": "^2.6.0",
     "@parcel/transformer-webmanifest": "^2.6.0",
+    "buffer": "^6.0.3",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"

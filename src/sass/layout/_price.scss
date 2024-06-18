@@ -1,5 +1,8 @@
 // .price{}
 
+
+//// Accordion ////
+
 .accordion-container {
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -153,6 +156,7 @@
 
 
 
+//// Term ////
 .term__list {
     position: relative;
     gap: 48px;
@@ -262,6 +266,8 @@
 
 
 
+//// Calcukator ////
+
 .calculator__title {
     @media screen and (max-width: 767px) {
         font-size: 22px;
@@ -325,6 +331,8 @@
 .calculator___checkboxes-cont {
     margin-bottom: 36px;
 }
+
+// checkboxes //
 
 .calculator__checkbox-field {
     display: flex;
@@ -394,7 +402,7 @@
 }
 
 
-
+// counter //
 
 .calculator___counter-cont-wrap {
     display: flex;
@@ -412,7 +420,17 @@
 .calculator__counter-field {
     display: flex;
     justify-content: flex-end;
-    align-items: baseline;
+    align-items: center;
+
+    @media screen and (max-width: 1199px) {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 18px;
+        line-height: 1.7;
+    }
 
     &+& {
         margin-top: 18px;
@@ -422,7 +440,7 @@
 .calculator__btn-counter {
     border: none;
     background: transparent;
-    padding: 8px;
+    padding: 6px 8px;
     width: fit-content;
 }
 
@@ -442,12 +460,12 @@
 //     }
 // }
 
-.calculator__counter-inpnt {
+.calculator__counter-input {
     background-color: transparent;
     outline: none;
     border: none;
     border-bottom: 1px solid $main-color;
-    padding: 4px 8px;
+    padding: 4px 8px 4px 14px;
     text-align: center;
     color: $main-color;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -460,21 +478,19 @@
         width: 120px;
     }
 
+    @media screen and (max-width: 1199px) {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 18px;
+    }
 
     &:hover {
         border-bottom: 1px solid $secondary-color;
     }
 }
 
-// input[type=number]::-webkit-inner-spin-button,
-// input[type=number]::-webkit-outer-spin-button {
-//     -webkit-appearance: none;
-//     margin: 0;
-// }
-
-// input[type=number] {
-//     -moz-appearance: textfield;
-// }
 
 .calculator__icon-minus,
 .calculator__icon-plus {
@@ -484,6 +500,27 @@
 
 .calculator__total {
     justify-self: flex-end;
+    font-weight: 500;
+
+    .calculator__counter-label {
+        @media screen and (max-width: 1199px) {
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            font-size: 20px;
+        }
+    }
+
+    .calculator__counter-input {
+        @media screen and (max-width: 479px) {
+            width: 96px;
+        }
+
+        @media screen and (min-width: 480px) {
+            width: 120px;
+        }
+    }
 }
 
 .calculator__counter-label {
