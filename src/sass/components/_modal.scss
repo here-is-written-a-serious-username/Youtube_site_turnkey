@@ -16,19 +16,19 @@
 
 .modal__wrap {
     @media screen and (max-width: 479px) {
-        width: 320px;
+        width: 318px;
     }
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
-        width: 560px;
+        width: 400px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        width: 560px;
+        width: 520px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: 560px;
+        width: 540px;
     }
 }
 
@@ -44,14 +44,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 36px;
+    margin-bottom: 48px;
 }
 
 .modal__title {
-    font-size: 30px;
-    font-weight: 600;
     line-height: 1.25;
-    color: rgb(105, 213, 31);
+
+    @media screen and (max-width: 767px) {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 30px;
+        font-weight: 700;
+    }
 }
 
 .modal__close {
@@ -62,54 +74,53 @@
 
     &:hover,
     &:focus {
-        transform: scale(1.025);
-        color: rgb(102, 255, 0);
+        transform: scale(1.2);
+        color: $secondary-color;
     }
 }
 
 .modal__close:before {
     content: "\2715";
-    font-size: 18px;
+    font-size: 20px;
 }
 
-.modal__content {
-    margin-bottom: 28px;
+// .modal__content {
+//     margin-bottom: 28px;
+// }
 
-}
+// .modal__btn {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     border: none;
+//     border-radius: 28px;
+//     background-color: rgb(105, 213, 31);
+//     font-weight: 500;
+//     letter-spacing: 0.2;
+//     transition: transform 250ms ease-in-out, background-color 250ms ease-in-out;
+//     will-change: transform, background-color;
 
-.modal__btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    border-radius: 28px;
-    background-color: rgb(105, 213, 31);
-    font-weight: 500;
-    letter-spacing: 0.2;
-    transition: transform 250ms ease-in-out, background-color 250ms ease-in-out;
-    will-change: transform, background-color;
+//     &:hover,
+//     &:focus {
+//         transform: scale(1.025);
+//         background-color: rgb(102, 255, 0);
+//     }
 
-    &:hover,
-    &:focus {
-        transform: scale(1.025);
-        background-color: rgb(102, 255, 0);
-    }
+//     @media screen and (max-width: 767px) {
+//         padding: 16px 32px;
+//         font-size: 16px;
+//     }
 
-    @media screen and (max-width: 767px) {
-        padding: 16px 32px;
-        font-size: 16px;
-    }
+//     @media screen and (min-width: 768px) and (max-width: 1199px) {
+//         padding: 20px 40px;
+//         font-size: 17px;
+//     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        padding: 20px 40px;
-        font-size: 17px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        padding: 20px 40px;
-        font-size: 18px;
-    }
-}
+//     @media screen and (min-width: 1200px) {
+//         padding: 20px 40px;
+//         font-size: 18px;
+//     }
+// }
 
 /**************************\
        Animation Style
@@ -181,4 +192,105 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
     will-change: transform;
+}
+
+
+.form {
+    @media screen and (max-width: 479px) {
+        padding: 0;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        padding: 0 12px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 0 18px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 0 24px;
+    }
+}
+
+.form__fields-wrap {
+    margin-bottom: 48px;
+}
+
+.form__field {
+    display: block;
+    position: relative;
+
+    &+& {
+        margin-top: 36px;
+    }
+}
+
+.form__input {
+    margin: 0;
+    padding: 14px 18px;
+
+    background: transparent;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-size: 16px;
+    line-height: 1.24;
+    color: inherit;
+
+    transition: border-color 250ms linear;
+
+    .form__field:hover & {
+        border-color: $secondary-color;
+    }
+
+    .form__field:focus-within>& {
+        outline: none;
+        border-color: $secondary-color;
+    }
+}
+
+.form__label {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear, color 250ms linear;
+
+    line-height: 1.24;
+
+    @media screen and (max-width: 479px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 480px) {
+        font-size: 16px;
+    }
+
+    .form__field:hover & {
+        color: $secondary-color;
+    }
+
+    .form__field:focus-within>& {
+        transform: translateY(-48px);
+        color: $secondary-color;
+    }
+
+    .form__input:not(:placeholder-shown)+& {
+        transform: translateY(-48px);
+    }
+}
+
+.form__input-valid {
+    border: 1px solid #33432B;
+}
+
+.form__input-invalid {
+    border: 1px solid #5E2020;
+}
+
+.submit-btn {
+    display: block;
+    margin: 0 auto;
 }
