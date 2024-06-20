@@ -84,6 +84,7 @@ ${calculatorData || "Калькулятор не клікали :( "}`
                     formValue.reset();
                     localStorage.removeItem(FORM_KEY);
                     Notify.success('Заявку надіслано.');
+                    MicroModal.close('modal-1');
                 })
                 .catch((err) => {
                     console.warn(err);
