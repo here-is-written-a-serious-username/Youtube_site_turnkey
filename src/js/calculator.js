@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         totalField.value = total;
         selectedFields.total = total;
-        // console.log('Selected Fields:', selectedFields);
+        console.log('Selected Fields:', selectedFields);
     }
 });
 
