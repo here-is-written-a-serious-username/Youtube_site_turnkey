@@ -1,13 +1,15 @@
 // .about{}
 
-// .about__title{}
+.about__title {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+}
 
 .about__content-wrap {
-    display: flex;
-    gap: 4%;
-
-    @media screen and (max-width: 767px) {
-        flex-direction: column-reverse;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 4%;
     }
 }
 
@@ -136,7 +138,7 @@
 .about__descr-cont {
 
     @media screen and (max-width: 767px) {
-        margin-top: 42px;
+        margin-bottom: 48px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
