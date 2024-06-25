@@ -43,7 +43,7 @@
     }
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
-        width: 348px;
+        width: 342px;
         margin-right: auto;
     }
 
@@ -67,13 +67,13 @@
             font-weight: 800;
         }
 
-        font-size: 32px;
+        font-size: 30px;
         font-weight: 800;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         & span {
-            font-size: 42px;
+            font-size: 44px;
             font-weight: 800;
         }
 
@@ -83,11 +83,11 @@
 
     @media screen and (min-width: 1200px) {
         & span {
-            font-size: 60px;
+            font-size: 64px;
             font-weight: 900;
         }
 
-        font-size: 58px;
+        font-size: 56px;
         font-weight: 900;
     }
 }
